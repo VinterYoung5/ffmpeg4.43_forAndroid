@@ -1,4 +1,5 @@
 #!/bin/bash
+#build by VinterYoung
 export NDK_HOME=/home/wen.yang/libtools/android-ndk-r20b
 if [ "$NDK_HOME" = "" ]
 then
