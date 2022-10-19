@@ -1,5 +1,6 @@
 #!/bin/bash
-if ["$NDK_HOME" == ""]
+export NDK_HOME=/home/wen.yang/libtools/android-ndk-r20b
+if [ "$NDK_HOME" = "" ]
 then
 	export NDK_HOME=./../android-ndk-r20b
 	echo NDK variable not set , assuming ${NDK_HOME}
