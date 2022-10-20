@@ -1,5 +1,4 @@
 #!/bin/bash
-#build by VinterYoung
 export NDK_HOME=/home/wen.yang/libtools/android-ndk-r20b
 if [ "$NDK_HOME" = "" ]
 then
@@ -900,11 +899,14 @@ build()
 	
 	if [ "$CPU" = "armv7a" ]
 	then
-		mkdir -p $(pwd)/prebuild/lib
-		cp $(pwd)/android/$CPU/lib/*.so* $(pwd)/prebuild/lib
+		mkdir -p $(pwd)/../ffmpeg_prebuild/lib
+		cp $(pwd)/android/$CPU/lib/*.so* $(pwd)/../ffmpeg_prebuild/lib
 	else
-		mkdir -p $(pwd)/prebuild/lib64
-		cp $(pwd)/android/$CPU/lib/*.so* $(pwd)/prebuild/lib64
+		mkdir -p $(pwd)/../ffmpeg_prebuild/lib64
+		cp $(pwd)/android/$CPU/lib/*.so* $(pwd)/../ffmpeg_prebuild/lib64
+		mkdir -p $(pwd)/../ffmpeg_prebuild/include
+		cp -rf $(pwd)/android/$CPU/include/* $(pwd)/../ffmpeg_prebuild/include/
+		cp $(pwd)/prebuild.make $(pwd)/../ffmpeg_prebuild/Android.mk
 	fi
 	make clean
 }
