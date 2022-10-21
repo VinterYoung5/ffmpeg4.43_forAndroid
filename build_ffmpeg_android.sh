@@ -63,6 +63,7 @@ CONFIG_FLAG="--target-os=android \
 --disable-avfilter \
 --disable-devices \
 --disable-filters \
+--enable-protocol=android \
 --disable-encoders \
 --disable-muxers \
 --disable-decoders \
