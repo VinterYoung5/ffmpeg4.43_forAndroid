@@ -543,7 +543,7 @@ FF_ENABLE_DEPRECATION_WARNINGS
     avcodec_string(buf, sizeof(buf), avctx, is_output);
     avcodec_free_context(&avctx);
 
-    av_log(NULL, AV_LOG_INFO, "  Stream #%d:%d", index, i);
+    av_log(NULL, AV_LOG_ERROR, "  Stream #%d:%d", index, i);
 
     /* the pid is an important information, so we display it */
     /* XXX: add a generic system */
@@ -553,7 +553,7 @@ FF_ENABLE_DEPRECATION_WARNINGS
         av_log(NULL, AV_LOG_INFO, "(%s)", lang->value);
     av_log(NULL, AV_LOG_DEBUG, ", %d, %d/%d", st->codec_info_nb_frames,
            st->time_base.num, st->time_base.den);
-    av_log(NULL, AV_LOG_INFO, ": %s", buf);
+    av_log(NULL, AV_LOG_ERROR, ": %s", buf);
 
     if (st->sample_aspect_ratio.num &&
         av_cmp_q(st->sample_aspect_ratio, st->codecpar->sample_aspect_ratio)) {
@@ -645,7 +645,7 @@ void av_dump_format(AVFormatContext *ic, int index,
     if (ic->nb_streams && !printed)
         return;
 
-    av_log(NULL, AV_LOG_INFO, "%s #%d, %s, %s '%s':\n",
+    av_log(NULL, AV_LOG_ERROR, "%s #%d, %s, %s '%s':\n",
            is_output ? "Output" : "Input",
            index,
            is_output ? ic->oformat->name : ic->iformat->name,
@@ -653,7 +653,7 @@ void av_dump_format(AVFormatContext *ic, int index,
     dump_metadata(NULL, ic->metadata, "  ");
 
     if (!is_output) {
-        av_log(NULL, AV_LOG_INFO, "  Duration: ");
+        av_log(NULL, AV_LOG_ERROR, "  Duration: ");
         if (ic->duration != AV_NOPTS_VALUE) {
             int64_t hours, mins, secs, us;
             int64_t duration = ic->duration + (ic->duration <= INT64_MAX - 5000 ? 5000 : 0);
@@ -663,7 +663,7 @@ void av_dump_format(AVFormatContext *ic, int index,
             secs %= 60;
             hours = mins / 60;
             mins %= 60;
-            av_log(NULL, AV_LOG_INFO, "%02"PRId64":%02"PRId64":%02"PRId64".%02"PRId64"", hours, mins, secs,
+            av_log(NULL, AV_LOG_ERROR, "%02"PRId64":%02"PRId64":%02"PRId64".%02"PRId64"", hours, mins, secs,
                    (100 * us) / AV_TIME_BASE);
         } else {
             av_log(NULL, AV_LOG_INFO, "N/A");

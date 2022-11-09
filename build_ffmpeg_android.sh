@@ -908,10 +908,10 @@ build()
 		cp -rf $(pwd)/android/$CPU/include/* $(pwd)/../ffmpeg_prebuild/include/
 		cp $(pwd)/prebuild.make $(pwd)/../ffmpeg_prebuild/Android.mk
 	fi
-	make clean
+	#make clean
 }
 
-make clean
+#make clean
 
 build armv7a
 build aarch64
