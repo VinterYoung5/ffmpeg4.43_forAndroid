@@ -553,7 +553,7 @@ FF_ENABLE_DEPRECATION_WARNINGS
         av_log(NULL, AV_LOG_INFO, "(%s)", lang->value);
     av_log(NULL, AV_LOG_DEBUG, ", %d, %d/%d", st->codec_info_nb_frames,
            st->time_base.num, st->time_base.den);
-    av_log(NULL, AV_LOG_ERROR, ": %s", buf);
+    av_log(NULL, AV_LOG_ERROR, "%s", buf);
 
     if (st->sample_aspect_ratio.num &&
         av_cmp_q(st->sample_aspect_ratio, st->codecpar->sample_aspect_ratio)) {

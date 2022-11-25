@@ -609,8 +609,6 @@ OBJS-$(CONFIG_LIBOPENMPT_DEMUXER)        += libopenmpt.o
 OBJS-$(CONFIG_VAPOURSYNTH_DEMUXER)       += vapoursynth.o
 
 # protocols I/O
-#add CONFIG_ANDROID_PROTOCOL
-OBJS-$(CONFIG_ANDROID_PROTOCOL)          += android.o
 OBJS-$(CONFIG_ASYNC_PROTOCOL)            += async.o
 OBJS-$(CONFIG_APPLEHTTP_PROTOCOL)        += hlsproto.o
 OBJS-$(CONFIG_BLURAY_PROTOCOL)           += bluray.o
