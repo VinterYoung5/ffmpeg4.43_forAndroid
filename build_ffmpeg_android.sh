@@ -1,6 +1,6 @@
 #!/bin/bash
 #build by VinterYoung
-export NDK_HOME=/home/wen.yang/libtools/android-ndk-r20b
+export NDK_HOME=/mnt/d/vinter/3.git/ffmpeg/android-ndk-r20b
 if [ "$NDK_HOME" = "" ]
 then
 	export NDK_HOME=./../android-ndk-r20b
@@ -907,7 +907,8 @@ build()
 		cp $(pwd)/android/$CPU/lib/*.so* $(pwd)/../ffmpeg_prebuild/lib64
 		mkdir -p $(pwd)/../ffmpeg_prebuild/include
 		cp -rf $(pwd)/android/$CPU/include/* $(pwd)/../ffmpeg_prebuild/include/
-		#cp $(pwd)/prebuild.make $(pwd)/../ffmpeg_prebuild/Android.mk
+		cp $(pwd)/prebuild.make $(pwd)/../ffmpeg_prebuild/Android.mk
+		cp $(pwd)/Android.mk $(pwd)/../Android.mk
 	fi
 	make clean
 }

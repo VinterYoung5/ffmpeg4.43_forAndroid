@@ -1,7 +1,7 @@
-prefix=/mnt/d/wen.yang/ffmpeg/source/ffmpeg-4.4.3/android/armv7a
+prefix=/mnt/d/vinter/3.git/ffmpeg/ffmpeg4android/ffmpeg4.43_forAndroid/android/armv7a
 exec_prefix=${prefix}
-libdir=/mnt/d/wen.yang/ffmpeg/source/ffmpeg-4.4.3/android/armv7a/lib
-includedir=/mnt/d/wen.yang/ffmpeg/source/ffmpeg-4.4.3/android/armv7a/include
+libdir=/mnt/d/vinter/3.git/ffmpeg/ffmpeg4android/ffmpeg4.43_forAndroid/android/armv7a/lib
+includedir=/mnt/d/vinter/3.git/ffmpeg/ffmpeg4android/ffmpeg4.43_forAndroid/android/armv7a/include
 
 Name: libavcodec
 Description: FFmpeg codec library
