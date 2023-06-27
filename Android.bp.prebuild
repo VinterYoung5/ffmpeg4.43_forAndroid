@@ -1,0 +1,85 @@
+
+cc_prebuilt_library_shared {
+    name: "libavcodec",
+    system_ext_specific: true,
+	vendor_available: true,
+
+	compile_multilib: "both",
+    multilib: {
+        lib64: {
+            srcs: ["lib64/libavcodec.so"],
+        },
+
+        lib32: {
+            srcs: ["lib/libavcodec.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libavformat",
+    system_ext_specific: true,
+	vendor_available: true,
+
+	compile_multilib: "both",
+    multilib: {
+        lib64: {
+            srcs: ["lib64/libavformat.so"],
+        },
+
+        lib32: {
+            srcs: ["lib/libavformat.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libavutil",
+    system_ext_specific: true,
+	vendor_available: true,
+
+	compile_multilib: "both",
+    multilib: {
+        lib64: {
+            srcs: ["lib64/libavutil.so"],
+        },
+
+        lib32: {
+            srcs: ["lib/libavutil.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libswresample",
+    system_ext_specific: true,
+	vendor_available: true,
+
+	compile_multilib: "both",
+    multilib: {
+        lib64: {
+            srcs: ["lib64/libswresample.so"],
+        },
+
+        lib32: {
+            srcs: ["lib/libswresample.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libswscale",
+    system_ext_specific: true,
+	vendor_available: true,
+
+	compile_multilib: "both",
+    multilib: {
+        lib64: {
+            srcs: ["lib64/libswscale.so"],
+        },
+
+        lib32: {
+            srcs: ["lib/libswscale.so"],
+        },
+    },
+}

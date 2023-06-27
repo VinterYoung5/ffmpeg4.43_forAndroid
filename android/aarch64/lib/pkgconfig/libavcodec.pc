@@ -1,7 +1,7 @@
-prefix=/mnt/e/code/tf10/vendor/flyme/frameworks/media/ffmpeg4android/ffmpeg4.43_forAndroid/android/aarch64
+prefix=/mnt/d/vinter/3.git/ffmpeg/ffmpeg4android/ffmpeg4.43_forAndroid/android/aarch64
 exec_prefix=${prefix}
-libdir=/mnt/e/code/tf10/vendor/flyme/frameworks/media/ffmpeg4android/ffmpeg4.43_forAndroid/android/aarch64/lib
-includedir=/mnt/e/code/tf10/vendor/flyme/frameworks/media/ffmpeg4android/ffmpeg4.43_forAndroid/android/aarch64/include
+libdir=/mnt/d/vinter/3.git/ffmpeg/ffmpeg4android/ffmpeg4.43_forAndroid/android/aarch64/lib
+includedir=/mnt/d/vinter/3.git/ffmpeg/ffmpeg4android/ffmpeg4.43_forAndroid/android/aarch64/include
 
 Name: libavcodec
 Description: FFmpeg codec library
